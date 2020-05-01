@@ -1,0 +1,4 @@
+
+gcc -c -Wall -Werror -fpic libtest.c
+gcc -shared -o libtest.so libtest.o
+

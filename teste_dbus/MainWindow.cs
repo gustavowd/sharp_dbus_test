@@ -6,9 +6,16 @@ using org.freedesktop.DBus;
 
 using System.Threading;
 
+using System.Runtime.InteropServices;
 
 public partial class MainWindow : Gtk.Window
 {
+    [DllImport("libtest.so", EntryPoint = "mult")]
+    static extern int mult(int a, int b);
+
+    [DllImport("libtest.so", EntryPoint = "sum")]
+    static extern int sum(int a, int b);
+
     ITestInterface sample;
     ITestInterface2 sample2;
     ITestInterface sample3;
@@ -21,10 +28,13 @@ public partial class MainWindow : Gtk.Window
         Build();
         t = new Thread(NovaThread);
         t.Start();
+        label1.Text = Convert.ToString(mult(5, 4));
+        label2.Text = Convert.ToString(sum(5, 4));
     }
 
     protected void OnDeleteEvent(object sender, DeleteEventArgs a)
     {
+        t.Abort();
         Application.Quit();
         a.RetVal = true;
     }

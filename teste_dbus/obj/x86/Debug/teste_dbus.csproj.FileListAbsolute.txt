@@ -2,3 +2,4 @@
 /home/gustavo/Projects/teste_dbus/teste_dbus/bin/Debug/teste_dbus.pdb
 /home/gustavo/Projects/teste_dbus/teste_dbus/obj/x86/Debug/teste_dbus.exe
 /home/gustavo/Projects/teste_dbus/teste_dbus/obj/x86/Debug/teste_dbus.pdb
+/home/gustavo/Projects/teste_dbus/teste_dbus/obj/x86/Debug/teste_dbus.csprojAssemblyReference.cache
